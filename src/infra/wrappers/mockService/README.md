@@ -4,7 +4,7 @@ This mock service simulates an external service you might integrate with in your
 
 ## User Endpoints
 
-### [Process User](/src/mockService/server.ts)
+### [Process User](/src/infra/wrappers/mockServiceers/mockService/server.ts)
 
 - **URL:** `/api/process`
 - **Method:** `POST`
