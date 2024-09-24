@@ -32,10 +32,10 @@ export const initialConfiguration = (): State => {
     console.log("User created: ", user.toDTO());
   }
 
-  const endState: State = {
-    recipients: obj.recipients,
-    users: obj.users,
-  };
+  if (!obj.quotas) {
+    save = true;
+    obj.quotas = [];
+  }
 
   if (save) {
     fs.writeFileSync(filePathUrl, JSON.stringify({ ...obj }), "utf8");
