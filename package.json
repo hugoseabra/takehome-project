@@ -6,7 +6,10 @@
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "express": "^4.19.2",
-    "express-rate-limit": "^7.4.0"
+    "express-rate-limit": "^7.4.0",
+    "joi": "^17.13.3",
+    "radash": "^12.1.0",
+    "uuid": "^10.0.0"
   },
   "scripts": {
     "dev": "nodemon"
@@ -14,6 +17,7 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.7",
+    "@types/uuid": "^10.0.0",
     "eslint": "^9.1.1",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
