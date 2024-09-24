@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
-import { Recipient, User } from "../types";
+import {RecipientDTO, UserDTO} from "../domain";
 
-export const createFakeRecipient = (): Recipient => {
+export const createFakeRecipient = (): Omit<RecipientDTO, "id"> => {
   return {
     name: faker.person.fullName(),
     email: faker.internet.email(),
@@ -18,12 +18,11 @@ export const generateAccessToken = (): string => {
   return faker.string.alphanumeric(20);
 };
 
-export const generateFakeUser = (): User => {
+export const generateFakeUser = (): Omit<UserDTO, "id"> => {
   return {
     name: faker.person.fullName(),
     email: faker.internet.email(),
     created: faker.date.past(),
     updated: faker.date.recent(),
-    accessToken: generateAccessToken(),
   };
 };
